@@ -1,0 +1,14 @@
+@use '@styles/mixins.scss';
+
+.login {
+    &__container {
+        @include mixins.auth-container(150px, 30%, 344px);
+    }
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 14px;
+  margin: 8px 0;
+  text-align: center;
+}

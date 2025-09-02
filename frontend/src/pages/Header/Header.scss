@@ -1,0 +1,52 @@
+@use '@styles/variables.scss';
+
+.header {
+    &__container {
+        border-bottom: 4px solid variables.$main-color;
+    }
+
+    &__logo {
+        width: 100%;
+    }
+
+    &__nav-container {
+        margin: 25px 29px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__nav {
+        gap: 70px;
+    }
+
+    &__link {
+        color: variables.$black-color;
+        text-decoration-color: variables.$link-inactive;
+        font-size: variables.$font-size-s;
+        transition: variables.$transition-slow text-decoration-color;
+
+        &:not(:last-child) {
+            margin-right: 70px;
+        }
+
+        &:hover {
+            text-decoration-color: variables.$link-active;
+        }
+    }
+
+    &__auth-slash {
+        color: variables.$black-color;
+        font-size: variables.$font-size-s;
+    }
+
+    &__auth-link {
+        color: variables.$black-color;
+        text-decoration-color: variables.$link-inactive;
+        font-size: variables.$font-size-s;
+        transition: variables.$transition-slow text-decoration-color;
+
+        &:hover {
+            text-decoration-color: variables.$link-active;
+        }
+    }
+}

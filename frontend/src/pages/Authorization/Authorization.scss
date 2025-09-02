@@ -1,0 +1,55 @@
+ @use '@styles/mixins';
+ @use '@styles/variables.scss';
+
+.login,
+.reg {
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        padding: 30px 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: variables.$main-color;
+        border-radius: variables.$radius-m;
+        box-shadow: 8px 8px 6px variables.$shadow-black;
+    }
+
+    &__title {
+        color: variables.$white-color;
+        font-size: variables.$font-size-l;
+        font-weight: variables.$font-weight-bold;
+        text-shadow: 4px 4px 6px variables.$shadow-white;
+    }
+
+    &__form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 28px;
+
+        &-input {
+            width: 70%;
+            padding: 4px 0 4px 16px;
+            height: 36px;
+            border: none;
+            border-radius: variables.$radius-s;
+            color: variables.$black-color;
+            font-size: variables.$font-size-s;
+
+            &::placeholder {
+                color: variables.$placeholder-main;
+                font-size: variables.$font-size-s;
+            }
+        }
+    }
+
+    &__button {
+        @include mixins.button(variables.$black-color, variables.$black-color, variables.$white-color);
+    }
+}

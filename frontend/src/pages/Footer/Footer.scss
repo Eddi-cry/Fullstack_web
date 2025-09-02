@@ -1,0 +1,45 @@
+@use '@styles/variables.scss';
+
+.footer {
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 29px;
+        background-color: variables.$main-color;
+    }
+
+    &__address,
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        font-size: variables.$font-size-s;
+        font-weight: variables.$font-weight-bold;
+        color: variables.$white-color;
+    }
+
+    &__description {
+        color: variables.$white-color;
+        font-size: variables.$font-size-xs;
+        font-weight: variables.$font-weight-regular;
+    }
+
+    &__email,
+    &__tel {
+        margin-left: 10px;
+        text-decoration-color: variables.$link-inactive-white;
+        color: variables.$white-color;
+        font-weight: variables.$font-weight-medium;
+        transition: variables.$transition-medium text-decoration-color;
+    }
+
+    &__email:hover,
+    &__tel:hover {
+        text-decoration-color: variables.$link-active-white;
+    }
+}

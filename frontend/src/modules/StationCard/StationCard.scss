@@ -1,0 +1,62 @@
+@use '@styles/variables.scss';
+
+.cards__station {
+    display: flex;
+    justify-content: flex-start;
+    grid-row: 1 / span 2;
+    grid-column-start: 2;
+    height: 100%;
+    width: 100%;
+    
+    &-container {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 30px 50px;
+        background-color: variables.$main-color;
+        border-radius: variables.$radius-s;
+        overflow-y: auto;
+        max-height: 60vh;
+    }
+
+    &-links {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &-link {
+        margin-bottom: 3vh;
+        background-color: variables.$white-color;
+        border: 1px solid variables.$white-color;
+        color: variables.$main-color;
+        font-size: variables.$font-size-xs;
+    }
+
+    &__title {
+        padding-top: 2vh;
+        margin-bottom: 3vh;
+        text-align: center;
+        border-top: 2px solid variables.$white-color;
+        font-weight: variables.$font-weight-bold;
+        font-size: variables.$font-size-s;
+        color: variables.$white-color;
+    }
+
+    &__subtitle {
+        margin-bottom: 2vh;
+        padding-top: 2vh;
+        font-weight: variables.$font-weight-bold;
+        font-size: variables.$font-size-s;
+        color: variables.$white-color;
+    }
+
+    &__description {
+        font-weight: variables.$font-weight-regular;
+        font-size: variables.$font-size-xs;
+        color: variables.$white-color;
+        
+        &:not(:last-child) {
+            margin-bottom: 2.5vh;
+        }
+    }
+}

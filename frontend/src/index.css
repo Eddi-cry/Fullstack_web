@@ -1,0 +1,39 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Stetica";
+}
+
+@font-face {
+  font-family: "Stetica";
+  src: url("../fonts/AA Stetica Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Stetica";
+  src: url("../fonts/AA Stetica Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Stetica";
+  src: url("../fonts/AA Stetica Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+} 

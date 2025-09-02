@@ -1,0 +1,77 @@
+@use '@styles/variables.scss';
+
+.cards {
+    margin-bottom: 5vh;
+
+    &__title {
+        margin-top: 39px;
+        margin-left: 29px;
+        font-weight: variables.$font-weight-bold;
+        font-size: variables.$font-size-m;
+    }
+
+    &__map {
+        height: 50vh;
+        width: 100%;
+
+        &-container {
+            display: grid;
+            grid-template: auto auto / 50vw auto;
+            gap: 2em;
+            margin: 39px 29px 0;
+        }
+
+        &-popup {
+            max-height: 250px;
+            overflow-y: auto;
+            border-radius: variables.$radius-s;
+        }
+
+        &-info {
+            max-width: 100%;
+            grid-row-start: 2;
+        }
+
+        &-info-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+            gap: 15px;
+        }
+
+        &-info-item {
+            list-style: none;
+            cursor: pointer;
+
+            &-title {
+                font-size: variables.$font-size-s;
+                -webkit-user-select: none; /* Safari */
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* IE 10+ */
+                user-select: none; /* Standard */
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &-title {
+            font-size: variables.$font-size-s;
+        }
+    }
+}
+
+.leaflet-popup-content {
+    .cards__map-popup__title {
+        margin-bottom: 0.5rem;
+    }
+
+    .cards__map-popup__description {
+        margin: 0;
+
+        &:last-child {
+            margin-bottom: 20px;
+        }
+    }
+}
